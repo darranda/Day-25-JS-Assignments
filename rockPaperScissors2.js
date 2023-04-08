@@ -107,6 +107,5 @@ function playTournament (onePlayer, twoPlayer,threePlayer, fourPlayer, playUntil
     playGame (threePlayer, fourPlayer, playUntil)
 }
 if (player1Score > player2Score && > player3Score && > player4Score) {
-
-    
+    playGame (onePlayer, twoPlayer, playUntil);
 }
