@@ -29,8 +29,9 @@ let fourPlayer = {
     let playUntil = 3
     let player1Score = 0
     let player2Score = 0
-    let player3Score = 0
-    let player4Score = 0
+    //let player3Score = 0
+    //let player4Score = 0
+
 
 
 /*Define a function called playRound() that Takes two player objects as arguments
@@ -109,31 +110,33 @@ Play a game between the winners of the first round.
 Announce the tournament winner's name "[name] is the world champion";*/
 
 function playTournament (onePlayer, twoPlayer,threePlayer, fourPlayer, playUntil) {
-    playGame (onePlayer, twoPlayer, playUntil)
-    playGame (threePlayer, fourPlayer, playUntil)
+   
+    playGame (onePlayer, twoPlayer, playUntil);
+    playGame (threePlayer, fourPlayer, playUntil);
+    
 }
 if (player1Score > player2Score &&  player3Score > player4Score) {
     playGame (onePlayer, threePlayer, playUntil);
     if (player1Score > player3Score) {
-        console.log (onePlayer.name, 'world champ!')
+        console.log (onePlayer.name, 'is the winner!')
     }
     else {
-        console.log (threePlayer.name, 'world champ!')
+        console.log (threePlayer.name, 'is the winner!')
     }
 }
 if (player1Score > player2Score &&  player3Score < player4Score) { 
     if (player1Score > player3Score) {
-        console.log (onePlayer.name, 'world champ!')
+        console.log (onePlayer.name, 'is the winner!')
     }
     else {
-        console.log (threePlayer.name, 'world champ!')
+        console.log (threePlayer.name, 'is the winner!')
     }
 }
 if (player1Score < player2Score &&  player3Score < player4Score) {
     if (player2Score > player4Score) {
-        console.log (onePlayer.name, 'world class!')
+        console.log (onePlayer.name, 'is the winner!')
     }
     else {
-        console.log (threePlayer.name, 'world class!')
+        console.log (threePlayer.name, 'is the winner!')
     }
 }
